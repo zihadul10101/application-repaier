@@ -5,11 +5,16 @@ import {
   Route
 } from "react-router-dom";
 import './App.css';
+
 import Home from "./components/Home/Home/Home";
 import Appointment from './components/Appointment/Appointment/Appointment';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import AllPatients from './components/AllPatients/AllPatients/AllPatients';
 import Login from "./components/Login/Login/Login";
+import Testimonials from "./components/Home/Testimonials/Testimonials";
+import Servies from "./components/Home/Servies/Servies";
+// import PrivateRoute from "./components/Login/Login/PrivateRoute/PrivateRoute";
+
 export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
@@ -26,6 +31,14 @@ function App() {
         <Route path="/dashboard/allPatients">
           <AllPatients></AllPatients>
         </Route>
+  
+        <Route path="/servies">
+          <Servies></Servies>
+        </Route>
+        <Route path="/reviews">
+         <Testimonials></Testimonials>
+        </Route>
+        
         <Route path="/login">
           <Login></Login>
         </Route>
