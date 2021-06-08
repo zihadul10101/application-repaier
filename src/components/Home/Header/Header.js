@@ -1,15 +1,12 @@
 import React from 'react';
-import HeaderMain from '../HeaderMain/HeaderMain';
-import Navbar from '../../Shared/Navbar/Navbar';
-import PaintingBusinessData from '../PaintingBusinessData/PaintingBusinessData';
-import './Header.css';
+import Banner from '../Banner/Banner';
+
 
 const Header = () => {
     return (
         <div className="header-container">
-            <Navbar></Navbar>
-            <HeaderMain></HeaderMain>
-            <PaintingBusinessData></PaintingBusinessData>
+          
+            <Banner></Banner>
         </div>
     );
 };

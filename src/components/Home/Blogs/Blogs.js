@@ -1,45 +1,44 @@
 import React from 'react';
-
-import wilson from '../../../images/Mask Group 3.png';
-import BlogPost from '../BlogPost/BlogPost';
-import './Blogs.css'
-
+import BlogNews from '../BlogNews/BlogNews';
+import wilson from '../../../images/z/home_service_photo1.jpg';
+import Eilson from '../../../images/z/home_service_photo2.jpg';
+import Silson from '../../../images/z/home_service_photo3.jpg';
 
 const blogData = [
     {
-        title : 'Check at least a doctor in a year for your teeth',
+        title : 'Hello world!',
         description : 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natus sit ipsam.        ',
-        author:'Dr. Cudi',
-        authorImg : wilson,
+      
+        Img : wilson,
         date : '23 April 2019'
     },
     {
-        title : 'Two time brush in a day can keep you healthy',
+        title : 'Vestibulum risus nulla',
         description : 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natus sit ipsam.        ',
-        author:'Dr. Sinthia',
-        authorImg : wilson,
+        Img : Eilson,
+    
         date : '23 April 2019'
     },
     {
-        title : 'The tooth cancer is taking a challenge',
+        title : 'Praesent tincidunt vulputate',
         description : 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natus sit ipsam.        ',
-        author:'Dr. Cudi',
-        authorImg : wilson,
+        Img : Silson,
+     
         date : '23 April 2019'
     },
 ]
 
 const Blogs = () => {
     return (
-       <section className="blogs my-5">
+        <section className="blogs my-5">
            <div className="container">
                <div className="section-header text-center">
                     <h5 className="text-primary text-uppercase">our blog</h5>
-                    <h1>From Our Blog News</h1>
+                    <h1>Our Recent News</h1>
                </div>
-               <div className="card-deck mt-5">
+               <div className="row mt-5">
                     {
-                        blogData.map(blog => <BlogPost blog={blog} key={blog.title}></BlogPost>)
+                        blogData.map(blog => <BlogNews blog={blog} key={blog.title}></BlogNews>)
                     }
                </div>
            </div>
