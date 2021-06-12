@@ -1,17 +1,23 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { UserContext } from '../../Context/ContextProvider';
+import { ServiceContext } from '../../../App';
 import ServiceDetail from '../ServiceDetail/ServiceDetail';
 
 
 const Servies = () => {
-// const [serviceDetails,setServiceDetails] = useContext(UserContext);
-const [serviceDetails,setServiceDetails] = useState([]);
+const [serviceDetails,setServiceDetails] = useContext(ServiceContext);
+const [manageDetails,setManageDetails] = useState([]);
 
-console.log(serviceDetails);
+
+// console.log(serviceDetails);
     useEffect(()=>{
-        fetch('http://localhost:7000/service')
+        // console.log(serviceDetails);
+        fetch('https://afternoon-forest-88463.herokuapp.com/service')
         .then(res=>res.json())
-        .then(data=>setServiceDetails(data))
+        .then(data=>{
+            setServiceDetails(data)
+            setManageDetails(data)
+        
+        })
     },[])
 
 
@@ -26,7 +32,7 @@ console.log(serviceDetails);
       <div className="d-flex justify-content-center">
       <div className="w-75 row mt-5 pt-5">
           {
-              serviceDetails.map(service => <ServiceDetail service={service} key={service.name}></ServiceDetail>)
+              manageDetails.map(service => <ServiceDetail service={service} key={service.name}></ServiceDetail>)
           }
 
 

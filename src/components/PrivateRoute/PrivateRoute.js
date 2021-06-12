@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 import { Route, Redirect } from 'react-router-dom';
-
-
 import jwt_decode from "jwt-decode";
 import { UserContext } from '../../App';
 

@@ -5,19 +5,21 @@ import Blogs from '../Blogs/Blogs';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
-import Review from '../Review/Review';
 import Servies from '../Servies/Servies';
+import Testimonial from '../Testimonial/Testimonial';
 
 const Home = () => {
     return (
-        <div className="info">
-            <Header></Header>
+        <div>
+           <div className="col-md-12">
+           <Header></Header>
             <About></About>
             <Servies></Servies>
-            <Review></Review>
+            <Testimonial></Testimonial>
             <Blogs></Blogs>
             <Contact></Contact>
             <Footer></Footer>
+           </div>
         </div>
     );
 };

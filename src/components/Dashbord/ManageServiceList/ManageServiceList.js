@@ -1,35 +1,23 @@
 import React, { useContext } from 'react';
-import { UserContext } from '../../../App';
+import { ServiceContext} from '../../../App';
+import ManageServiceLists from '../ManageServiceLists';
 
 
 
 const ManageServiceList = () => {
-const [serviceDetails,setServiceDetails] =useContext(UserContext);
-    console.log(serviceDetails);
+const [serviceDetails,setServiceDetails] =useContext(ServiceContext);
+    // console.log(serviceDetails);
     return (
         <div class="container">
 
 
-            <table class="table ">
-                <thead>
-                    <tr>
-                        <th>Service</th>
-                        <th>Price</th>
-                        <th>Action</th>
-                       
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>dd</td>
-                        <td>yy</td>
-                        <td>  <button className="btn-primary">Update</button><br /><button className="btn-danger">Delete</button> </td>
-                       
-                    </tr>
-                   
-                  
-                </tbody>
-            </table>
+
+            {
+                serviceDetails.map(servicelist => <ManageServiceLists servicelist={servicelist} key={servicelist.name}></ManageServiceLists>)
+            }
+
+
+          
         </div>
 
     );

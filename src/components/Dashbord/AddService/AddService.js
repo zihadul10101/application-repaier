@@ -48,7 +48,7 @@ const AddService = () => {
   return (
     <section className="container-fluid row">
       <Sidebar></Sidebar>
-      <div className="col-md-10 p-4 pr-5" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
+      <div className="col-md-10 p-4 pr-5" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB", textAlign: "center" }}>
         <h5 className="text-brand">Add a Service</h5>
         <form onSubmit={handleSubmit(onSubmit)}>
           Title:

@@ -6,16 +6,16 @@ const Profile = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     //    console.log(loggedInUser);
     return (
-        <section className="container-fluid row">
+        <section className="container-fluid row" style={{textAlign:"center"}}>
             <Sidebar></Sidebar>
-            <div className="col-md-10 p-4 pr-5 rounded-circle" style={{position: "absolute",  right: 0, backgroundColor: "#F4FDFB" }}>
+            <div className="col-md-10 p-4 pr-5 rounded-circle" style={{position: "absolute",  right: 0, backgroundColor: "#F4FDFB" ,textAlign:"center"}}>
                 {
                     loggedInUser && 
-                    <div className="col-md-4">
+                    <div className="col-md-4 " >
 
-                    <div className=" justify-content-center ">
-                        <div className="card d-flex">
-                            {/* <img className="card-img-top mx-3" src={loggedInUser.photoURL} width="60" alt="Card image cap" /> */}
+                    <div className=" justify-content-center " >
+                        <div className="card d-flex center" >
+                            <img className="card-img-top mx-3" src={loggedInUser.photoURL}  width="60" alt="Card image cap" />
                             <div className="card-body">
                                 <h5 className="card-title">{loggedInUser.name}</h5>
 
@@ -31,8 +31,6 @@ const Profile = () => {
                     </div>
                 </div>   
                 }
-                
-
 </div>
         </section>
     );

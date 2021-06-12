@@ -1,18 +1,22 @@
 import React from 'react';
 
-const ReviewDetail = (props) => {
-    const { quote, name, from, img } = props.testimonial;
+const TestimonialDetail = (props) => {
+    const {  name,email, description, imgUrl } = props.testimonial;
     return (
         <div className="col-md-4 pt-5 pb-5">
             <div className=" justify-content-center ">
             <div className="card d-flex pt-5 pb-20">
-                <img className="card-img-top mx-3" src={img} width="40" alt="Card image cap"/>
+                <img className="card-img-top mx-3" src={imgUrl} width="40" alt="Card image cap"/>
+                <br />
+                <br />
                     <div className="card-body">
+                        <br />
                         <h5 className="card-title">{name}</h5>
-                        <p className="card-text">{from} .</p>
+                        <br />
+                      <p>{email}</p>
                     </div>
                     <div className="card-footer">
-                        <small className="text-muted">{quote} </small>
+                        <small className="text-muted">{description} </small>
                     </div>   
             </div>
         </div>
@@ -38,4 +42,5 @@ const ReviewDetail = (props) => {
     );
 };
 
-export default ReviewDetail;
+export default TestimonialDetail;
+

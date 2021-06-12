@@ -8,10 +8,8 @@ import { UserContext } from '../../App';
 
 
 
-
-
 const Login = () => {
-    const {loggedInUser, setLoggedInUser} = useContext(UserContext);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     console.log(loggedInUser);
     const history = useHistory();
     const location = useLocation();
@@ -23,9 +21,9 @@ const Login = () => {
     const handleGoogleSignIn = () => {
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider).then(function (result) {
-            const { displayName, email } = result.user;
+            const { displayName, email ,photoURL } = result.user;
           
-            const signedInUser = { name: displayName, email }
+            const signedInUser = { name: displayName, email,photoURL }
             setLoggedInUser(signedInUser);
             storeAuthToken();
         }).catch(function (error) {
@@ -42,6 +40,9 @@ const Login = () => {
             }).catch(function (error) {
                 // Handle error
             });
+            // setTimeout =(function(){
+            // sessionStorage.clear()
+            // } )
     }
 
     return (

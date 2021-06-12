@@ -3,7 +3,7 @@ import aboutImg from '../../../images/z/about1.jpg';
 
 const About = () => {
     return (
-        <div className="row mt-5 ">
+        <div className="row mt-2 ">
             <div className="col-md-6 text-center">
                 <img src={aboutImg} alt="" />
             </div>

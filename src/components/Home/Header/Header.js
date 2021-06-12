@@ -4,9 +4,11 @@ import Banner from '../Banner/Banner';
 
 const Header = () => {
     return (
-        <div className="header-container">
+        <div className="row">
           
-            <Banner></Banner>
+          <div className="col-md-12">
+          <Banner></Banner>
+          </div>
         </div>
     );
 };
