@@ -10,7 +10,7 @@ const Book = () => {
   const { _id } = useParams();
   // console.log(_id);
   const [chackOut, setCheckOut] = useState([]);
-  console.log(chackOut);
+  // console.log(chackOut);
   useEffect(() => {
     fetch('https://afternoon-forest-88463.herokuapp.com/service')
       .then(res => res.json())
@@ -22,11 +22,13 @@ const Book = () => {
 
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  
   // console.log(loggedInUser);
 
   const onSubmit = () => {
 
     const client = {
+      payment :orderSuccess,
       ...books,
       name: loggedInUser.name,
       email: loggedInUser.email,
@@ -34,6 +36,7 @@ const Book = () => {
       servicePrice: books.price
 
     }
+    delete client._id;
     fetch('http://localhost:7000/addOrder', {
       method: 'POST',
       headers: {
@@ -43,20 +46,26 @@ const Book = () => {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data);
+        setOrderSuccess(data);
       })
     console.log(client);
   }
+  const [orderSuccess,setOrderSuccess]=useState([]);
+  console.log(orderSuccess);
   const handlePaymentSuccess = paymentId => {
-  
+ 
     const bookingDetails = {
       paymentId,
       orderTime: new Date()
+    
     };
+    
+    
+    
   
   }
-
-
+ 
+ 
 
   return (
     <section className="container-fluid row pt-5">

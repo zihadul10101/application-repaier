@@ -1,12 +1,13 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { UserContext } from '../../../App';
 
 import Sidebar from '../Sidebar/Sidebar';
 
 const Reviews = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [imgUrl, setImgUrl] = useState(null);
     const onSubmit = data => {
       console.log(data)
@@ -55,17 +56,17 @@ const Reviews = () => {
           <h5 className="text-brand">Your Feedback</h5>
           <form onSubmit={handleSubmit(onSubmit)}>
           Image:
-          <input name="image" type="file" onChange={handleImageUpload} />
+          <input name="image" type="file"  onChange={handleImageUpload} />
           {errors.image && <span>This field is required</span>}
             <br />
             <br />
             Name:
-            <input  {...register("name", { required: true })} />
+            <input  {...register("name", { required: true })} value={loggedInUser.name} />
             {errors.name && <span>This field is required</span>}
             <br />
             <br />
             Email:
-            <input {...register("email", { required: true })} />
+            <input {...register("email", { required: true })} value= {loggedInUser.email} />
             {errors.email && <span>This field is required</span>}
             <br />
             <br />

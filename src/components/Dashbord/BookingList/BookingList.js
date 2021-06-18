@@ -12,14 +12,27 @@ const BookingList = () => {
             .then(data => setBookingList(data))
     }, [])
     return (
-        <section className="container-fluid row" style={{textAlign:"center"}}>
+        <section className="container-fluid row" style={{ textAlign: "center" }}>
             <Sidebar></Sidebar>
-            <div className="col-md-10" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
-               <div className="col-md-2">
-               {
-                    bookingList.map(list => <BookingLists list={list} key={list.name}></BookingLists>)
-                }
-               </div>
+            <div className="col-md-10 container pr-2" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
+                
+                    <table class="table ">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Service Name</th>
+                                <th>Service Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                bookingList.map(list => <BookingLists list={list} key={list.name}></BookingLists>)
+                            }
+                        </tbody>
+                    </table>
+                
             </div>
 
 

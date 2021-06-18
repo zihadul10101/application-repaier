@@ -19,6 +19,7 @@ import Book from './components/Dashbord/Book/Book';
 import Testimonial from './components/Home/Testimonial/Testimonial';
 import Reviews from './components/Dashbord/Reviews/Reviews';
 import BookingList from "./components/Dashbord/BookingList/BookingList";
+import MakeAdmin from "./components/Dashbord/MakeAdmin/MakeAdmin";
 
 export const UserContext = createContext();
 export const ServiceContext = createContext();
@@ -37,12 +38,15 @@ function App() {
             <Route path="/servies">
               <Servies></Servies>
             </Route>
+            <PrivateRoute path="/makeAdmin">
+              <MakeAdmin></MakeAdmin>
+            </PrivateRoute>
             <Route path="/reviews">
               <Reviews></Reviews>
             </Route>
-            <Route path="/orderList">
+            <PrivateRoute path="/orderList">
               <BookingList></BookingList>
-            </Route>
+            </PrivateRoute>
             <Route path="/testimonial">
               <Testimonial></Testimonial>
             </Route>
@@ -52,9 +56,9 @@ function App() {
             <PrivateRoute path="/dashboard">
               <Dashbord></Dashbord>
             </PrivateRoute>
-            <Route path="/booking/:_id">
+            <PrivateRoute path="/booking/:_id">
               <Book></Book>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/addServies">
               <AddService></AddService>
             </PrivateRoute>

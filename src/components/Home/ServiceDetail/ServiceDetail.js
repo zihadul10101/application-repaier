@@ -6,7 +6,8 @@ const ServiceDetail = (props) => {
     const { imageUrl, name, price ,_id} = props.service;
     // console.log(props.service)
     return (
-        <div className="col-md-4 pt-5 pb-5">
+       
+            <div className="col-md-4 pt-5 pb-5">
             <div className=" justify-content-center ">
                 <div className="card d-flex pt-5 pb-20">
                     <img className="card-img-top mx-3" src={imageUrl} style={{ height: '80px' }} alt="Card image cap" />
@@ -23,6 +24,7 @@ const ServiceDetail = (props) => {
                 </div>
             </div>
         </div>
+ 
 
     );
 };

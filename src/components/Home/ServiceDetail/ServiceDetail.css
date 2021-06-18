@@ -33,3 +33,7 @@ body{
       margin: 20px;
     }
   } 
+  .service {
+    display: grid;
+    grid-template-columns: 3 1fr;
+  }

@@ -1,0 +1,54 @@
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #dfdbe5;
+    background-image: url(../../../images/z/watercolor-flowers-collection_79603-1700.jpg);
+}
+.user-image {
+    width: 90px;
+    height: 90px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-photo {
+    border-radius: 45px;
+    width: 80px;
+
+}
+
+.swiper-container {
+    background-color: rgb(218, 229, 253);
+    height: 100%;
+    width: 80%;
+    box-shadow: 4px 4px 5px rgb(0, 0,0, .2);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+.user-testimonial {
+    font-size: large;
+}
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-content {
+    background-color: #fff;
+    width: 100%;
+    height: 40%;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+}
