@@ -3,12 +3,10 @@ import Banner from '../Banner/Banner';
 
 
 const Header = () => {
-    return (
-        <div className="row">
-          
-          <div className="col-md-12">
+    return ( 
+          <div className="col-md-12 pt-5">
           <Banner></Banner>
-          </div>
+    
         </div>
     );
 };

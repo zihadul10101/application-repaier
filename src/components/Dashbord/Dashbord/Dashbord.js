@@ -3,7 +3,7 @@ import React from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 const containerStyle = {
     backgroundColor: "#F4FDFB",
-    height: "100%"
+    height: "800px"
 }
 const Dashbord = () => {
     return (

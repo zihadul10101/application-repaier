@@ -9,7 +9,7 @@ const ServiceDetail = (props) => {
        
             <div className="col-md-4 pt-5 pb-5">
             <div className=" justify-content-center ">
-                <div className="card d-flex pt-5 pb-20">
+                <div className="card d-flex pt-5 pb-20"  data-aos="zoom-in">
                     <img className="card-img-top mx-3" src={imageUrl} style={{ height: '80px' }} alt="Card image cap" />
                     <br />
                     <br />

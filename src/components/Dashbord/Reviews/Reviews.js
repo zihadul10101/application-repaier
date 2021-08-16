@@ -17,7 +17,7 @@ const Reviews = () => {
         email: data.email,
         description: data.description
       };
-      const url = `https://afternoon-forest-88463.herokuapp.com/addReview`;
+      const url = `https://guarded-shelf-32601.herokuapp.com/addReview`;
   
       console.log(reviewData);
       fetch(url, {

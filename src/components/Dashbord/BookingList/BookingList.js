@@ -7,7 +7,7 @@ const BookingList = () => {
     console.log(bookingList);
 
     useEffect(() => {
-        fetch('http://localhost:7000/orders')
+        fetch('https://guarded-shelf-32601.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setBookingList(data))
     }, [])

@@ -10,17 +10,17 @@ import Testimonial from '../Testimonial/Testimonial';
 
 const Home = () => {
     return (
-        <div>
-           <div className="col-md-12">
-           <Header></Header>
-            <About></About>
+        <div className="home">
+           
+           <Header className="header"></Header>
+            <About className="abourth"></About>
             <Servies></Servies>
             <Testimonial></Testimonial>
             <Blogs></Blogs>
             <Contact></Contact>
             <Footer></Footer>
            </div>
-        </div>
+        
     );
 };
 

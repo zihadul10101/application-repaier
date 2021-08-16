@@ -12,7 +12,7 @@ const Book = () => {
   const [chackOut, setCheckOut] = useState([]);
   // console.log(chackOut);
   useEffect(() => {
-    fetch('https://afternoon-forest-88463.herokuapp.com/service')
+    fetch('http://localhost:7000/service')
       .then(res => res.json())
       .then(data => setCheckOut(data))
   }, [])
@@ -37,7 +37,7 @@ const Book = () => {
 
     }
     delete client._id;
-    fetch('http://localhost:7000/addOrder', {
+    fetch('https://guarded-shelf-32601.herokuapp.com/addOrder', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -58,10 +58,7 @@ const Book = () => {
       paymentId,
       orderTime: new Date()
     
-    };
-    
-    
-    
+    };   
   
   }
  

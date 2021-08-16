@@ -14,7 +14,7 @@ const AddService = () => {
       imageUrl: imageUrl,
       price: data.price
     };
-    const url = `http://localhost:7000/addService`;
+    const url = `https://guarded-shelf-32601.herokuapp.com/addService`;
 
     console.log(serviceData);
     fetch(url, {

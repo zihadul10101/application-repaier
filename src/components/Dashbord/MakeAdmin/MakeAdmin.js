@@ -7,7 +7,7 @@ const MakeAdmin = () => {
     const onSubmit = data => {
         const email = data.email;
 
-        fetch("http://localhost:7000/addAdmin", {
+        fetch("https://guarded-shelf-32601.herokuapp.com/addAdmin", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

@@ -11,7 +11,7 @@ const Servies = () => {
     // console.log(serviceDetails);
     useEffect(() => {
         // console.log(serviceDetails);
-        fetch('https://afternoon-forest-88463.herokuapp.com/service')
+        fetch('https://guarded-shelf-32601.herokuapp.com/service')
             .then(res => res.json())
             .then(data => {
                 setServiceDetails(data)

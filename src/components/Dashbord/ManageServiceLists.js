@@ -10,9 +10,6 @@ const ManageServiceLists = (props) => {
                         {/* <td>  <button className="btn-primary">Update</button> </td> */}
                         <td><button onClick={()=> deleteProduct(_id) } className="btn-danger">Delete</button> </td>
                     </tr>
-        
-         
-    
     );
 };
 

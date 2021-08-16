@@ -19,7 +19,7 @@ const Testimonial = () => {
     const [reviewDetails, setReviewDetails] = useState([]);
     // console.log(reviewDetails);
     useEffect(() => {
-        fetch('https://afternoon-forest-88463.herokuapp.com/reviews')
+        fetch('https://guarded-shelf-32601.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => setReviewDetails(data))
     }, [])
